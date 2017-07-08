@@ -4,9 +4,17 @@ import os
 import re
 import sys
 import argparse
-from colored import fg, attr
 
+try:
+    from colored import fg, attr
+except ImportError:
+    def fg(*args):
+        return ''
 
+    def attr(*args):
+        return ''
+
+# Color chart: https://pypi.python.org/pypi/colored/1.3.3
 COLORS = {
     'A': fg(11),
     'B': fg(118),
@@ -46,7 +54,7 @@ def read_file(path):
         return linenum_and_line
 
 
-def main(root, share=None):
+def main(root):
     if not os.path.isdir(root):
         print("Error: %s is not a directory" % args.dir)
         sys.exit(1)
