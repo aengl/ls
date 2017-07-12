@@ -8,8 +8,6 @@ shift
   echo "  Customised ls:"
   echo "    ls"
   echo "      shows items sorted by priority"
-  echo "    ls ~/shared"
-  echo "      shows items using a different TODO_DIR"
   echo ""
   exit
 }

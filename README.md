@@ -1,5 +1,5 @@
 # ls
-A customised "ls" command for todo-txt.
+A customised "ls" command for [todo.txt](https://github.com/ginatrapani/todo.txt-cli).
 
 ## Installation
 
@@ -23,6 +23,4 @@ Then clone this repository into the folder `ls`:
 
 To view a shared `todo.txt`:
 
-    todo.sh ls <path_to_todo_dir>
-
-The path can be relative to `TODO_DIR`, or absolute.
+    todo.sh -d <path_to_todo_dir> ls
